@@ -43,7 +43,6 @@ void	add_map(t_solong *map, char *av)
 {
 	int		fd;
 	int		i;
-	char	**tmp;
 
 	map->tab = malloc(sizeof(char *) * map->count_line + 1);
 	fd = open(av, O_RDONLY);

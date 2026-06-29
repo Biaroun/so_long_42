@@ -39,7 +39,21 @@ Ce dépôt contient :
 
 ## ⚙️ Compilation
 
-### Construire le projet
+### 1. Cloner le projet (avec la MiniLibX)
+
+Pour récupérer le projet et son sous-module `mlx`, clonez avec l'option `--recursive` :
+
+```bash
+git clone --recursive <repository_url>
+```
+
+Si le projet a déjà été cloné sans cette option, initialisez le sous-module avec :
+
+```bash
+git submodule update --init --recursive
+```
+
+### 2. Construire le projet
 
 ```bash
 make
@@ -47,7 +61,7 @@ make
 
 Génère : `so_long`
 
-### Nettoyer
+### 3. Nettoyer
 
 ```bash
 make clean
@@ -55,7 +69,7 @@ make fclean
 make re
 ```
 
-> Note : le `Makefile` actuel lie MiniLibX avec `-framework OpenGL -framework AppKit` (configuration macOS).
+> Note : Le `Makefile` actuel détecte et gère automatiquement la compilation sur Linux (avec X11) et macOS (avec OpenGL/AppKit).
 
 ---
 

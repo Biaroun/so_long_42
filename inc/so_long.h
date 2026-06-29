@@ -13,11 +13,19 @@
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# define ESC 53
-# define W_KEY 13
-# define A_KEY 0
-# define S_KEY 1
-# define D_KEY 2
+# ifdef __APPLE__
+#  define ESC 53
+#  define W_KEY 13
+#  define A_KEY 0
+#  define S_KEY 1
+#  define D_KEY 2
+# else
+#  define ESC 65307
+#  define W_KEY 119
+#  define A_KEY 97
+#  define S_KEY 115
+#  define D_KEY 100
+# endif
 # define PXL 32
 
 # include <unistd.h>
@@ -66,11 +74,6 @@ typedef struct s_solong
 	int		y;
 }	t_solong;
 
-static void	check_move_right(t_solong *map);
-static void	check_move_down(t_solong *map);
-static void	check_move_left(t_solong *map);
-static void	check_move_up(t_solong *map);
-static void	texture_init(t_solong *map);
 void		is_solvable(t_solong *map);
 
 void		aff_map(t_solong *map, int y, int x);
