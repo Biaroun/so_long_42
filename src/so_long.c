@@ -99,7 +99,7 @@ int	main(int ac, char **av)
 		map_init(&map);
 		texture_init(&map);
 		pars_map(&map);
-		mlx_hook(map.win, 2, 0, key_assign, &map);
+		mlx_hook(map.win, 2, 1L<<0, key_assign, &map);
 		mlx_hook(map.win, 17, 0, exit_game, &map);
 		mlx_loop(map.mlx);
 		free_tab(map.tab);
