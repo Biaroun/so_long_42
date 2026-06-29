@@ -44,7 +44,7 @@ Ce dépôt contient :
 Pour récupérer le projet et son sous-module `mlx`, clonez avec l'option `--recursive` :
 
 ```bash
-git clone --recursive <repository_url>
+git clone --recursive git@github.com:Biaroun/so_long_42.git
 ```
 
 Si le projet a déjà été cloné sans cette option, initialisez le sous-module avec :
